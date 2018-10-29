@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+
+
+import Contacts from './views/contacts';
+import Create from './views/create';
+import Login from './views/login';
+import Signup from './views/signup';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+      return  (
+          <BrowserRouter className="mainc">
+            <Fragment>
+              <main>
+                <Switch>
+                  <Route exact path="/contacts" component={Contacts} />
+                  <Route exact path="/create" component={Create} />
+                  <Route exact path="/login" component={Login} />
+                  <Route exact path="/signup" component={Signup} />
+                  {/* <Route component={NotFound} /> */}
+                </Switch>
+              </main>
+            </Fragment>
+          </BrowserRouter>
+      );
+    }
 }
 
 export default App;
