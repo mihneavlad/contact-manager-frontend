@@ -1,19 +1,21 @@
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import React, {Fragment} from 'react';
+import { Form, Row, Col } from 'reactstrap';
+import "../css/main.css";
+
 
 const Contacts = () => {
   return (
-    <Form inline>
-      <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-        <Label for="exampleEmail" className="mr-sm-2">Email</Label>
-        <Input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" />
-      </FormGroup>
-      <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-        <Label for="examplePassword" className="mr-sm-2">Password</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="don't tell!" />
-      </FormGroup>
-      <Button>Submit</Button>
-    </Form>
+    <Fragment>
+      <div className="container d-flex m-auto">
+        <Form className = "col-sm-4 m-auto">
+          <h5 className="text-center mb-4">Contacts Table</h5>
+          <Row>
+            <Col className="text-center">First Name</Col>
+            <Col className="text-center">Last Name</Col>
+          </Row>
+        </Form>
+       </div>
+    </Fragment>
   );
 }
 
