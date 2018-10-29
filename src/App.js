@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-
 import Contacts from './views/contacts';
 import Create from './views/create';
 import Login from './views/login';
